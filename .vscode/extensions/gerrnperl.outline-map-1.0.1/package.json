@@ -1,0 +1,383 @@
+{
+	"name": "outline-map",
+	"displayName": "Outline Map",
+	"description": "A visual, interactive outline map that combinesAlternative Minimap. the clarity of the outline with the intuitive overview of the minimap. Enhanced version of vscode built-in outline.",
+	"version": "1.0.1",
+	"repository": {
+		"url": "https://github.com/Gerrnperl/outline-map.git"
+	},
+	"keywords": [
+		"outline",
+		"map",
+		"minimap",
+		"Thumbnail"
+	],
+	"author": {
+		"name": "Gerrnperl"
+	},
+	"browser": "./out/extension/index.js",
+	"icon": "icon/outline-map.png",
+	"publisher": "Gerrnperl",
+	"galleryBanner": {
+		"color": "#3f51b5",
+		"theme": "dark"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onView:outline-map-view"
+	],
+	"main": "./out/extension/index.js",
+	"badges": [
+		{
+			"href": "https://img.shields.io/",
+			"url": "https://img.shields.io/visual-studio-marketplace/v/gerrnperl.outline-map?color=8bf7c7&logo=visualstudio&style=flat-square",
+			"description": "version"
+		},
+		{
+			"href": "https://img.shields.io/",
+			"url": "https://img.shields.io/visual-studio-marketplace/i/gerrnperl.outline-map?color=56b6c2&logo=visualstudiocode&style=flat-square",
+			"description": "installs"
+		},
+		{
+			"href": "https://img.shields.io/",
+			"url": "https://img.shields.io/visual-studio-marketplace/stars/gerrnperl.outline-map?color=97dbf3&style=flat-square",
+			"description": "rating"
+		}
+	],
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "outline-map",
+					"title": "Outline Map",
+					"icon": "icon/outline-map-24.svg"
+				}
+			]
+		},
+		"views": {
+			"outline-map": [
+				{
+					"type": "webview",
+					"id": "outline-map-view",
+					"name": "Outline Map"
+				}
+			]
+		},
+		"configuration": {
+			"title": "Outline Map",
+			"properties": {
+				"outline-map.color": {
+					"type": "object",
+					"default": {
+						"visibleRange": "var(--vscode-scrollbarSlider-background)",
+						"focusingItem": "var(--vscode-editorCursor-foreground)",
+						"module": "var(--vscode-symbolIcon-moduleForeground)",
+						"namespace": "var(--vscode-symbolIcon-namespaceForeground)",
+						"package": "var(--vscode-symbolIcon-packageForeground)",
+						"class": "var(--vscode-symbolIcon-classForeground)",
+						"method": "var(--vscode-symbolIcon-methodForeground)",
+						"property": "var(--vscode-symbolIcon-propertyForeground)",
+						"field": "var(--vscode-symbolIcon-fieldForeground)",
+						"constructor": "var(--vscode-symbolIcon-constructorForeground)",
+						"enum": "var(--vscode-symbolIcon-enumeratorForeground)",
+						"interface": "var(--vscode-symbolIcon-interfaceForeground)",
+						"function": "var(--vscode-symbolIcon-functionForeground)",
+						"variable": "var(--vscode-symbolIcon-variableForeground)",
+						"constant": "var(--vscode-symbolIcon-constantForeground)",
+						"string": "var(--vscode-symbolIcon-stringForeground)",
+						"number": "var(--vscode-symbolIcon-numberForeground)",
+						"boolean": "var(--vscode-symbolIcon-booleanForeground)",
+						"array": "var(--vscode-symbolIcon-arrayForeground)",
+						"object": "var(--vscode-symbolIcon-objectForeground)",
+						"key": "var(--vscode-symbolIcon-keyForeground)",
+						"null": "var(--vscode-symbolIcon-nullForeground)",
+						"enummember": "var(--vscode-symbolIcon-enumMemberForeground)",
+						"struct": "var(--vscode-symbolIcon-structForeground)",
+						"event": "var(--vscode-symbolIcon-eventForeground)",
+						"operator": "var(--vscode-symbolIcon-operatorForeground)",
+						"typeparameter": "var(--vscode-symbolIcon-typeParameterForeground)"
+					},
+					"description": "override colors of specific symbols and some ui components.",
+					"properties": {
+						"visibleRange": {
+							"type": "string",
+							"description": "The color of the visible range in the outline."
+						},
+						"focusingItem": {
+							"type": "string",
+							"description": "The color of the focusing item in the outline."
+						},
+						"module": {
+							"type": "string"
+						},
+						"namespace": {
+							"type": "string"
+						},
+						"package": {
+							"type": "string"
+						},
+						"class": {
+							"type": "string"
+						},
+						"method": {
+							"type": "string"
+						},
+						"property": {
+							"type": "string"
+						},
+						"field": {
+							"type": "string"
+						},
+						"constructor": {
+							"type": "string"
+						},
+						"enum": {
+							"type": "string"
+						},
+						"interface": {
+							"type": "string"
+						},
+						"function": {
+							"type": "string"
+						},
+						"variable": {
+							"type": "string"
+						},
+						"constant": {
+							"type": "string"
+						},
+						"string": {
+							"type": "string"
+						},
+						"number": {
+							"type": "string"
+						},
+						"boolean": {
+							"type": "string"
+						},
+						"array": {
+							"type": "string"
+						},
+						"object": {
+							"type": "string"
+						},
+						"key": {
+							"type": "string"
+						},
+						"null": {
+							"type": "string"
+						},
+						"enummember": {
+							"type": "string"
+						},
+						"struct": {
+							"type": "string"
+						},
+						"event": {
+							"type": "string"
+						},
+						"operator": {
+							"type": "string"
+						},
+						"typeparameter": {
+							"type": "string"
+						}
+					}
+				},
+				"outline-map.follow": {
+					"type": "string",
+					"enum": [
+						"cursor",
+						"viewport",
+						"manual"
+					],
+					"default": "cursor",
+					"description": "Scroll the outline when the cursor moves or the viewport scrolls. if set to manual, the outline will not expand automatically."
+				},
+				"outline-map.hiddenItem": {
+					"type": "array",
+					"description": "Choose items to hide in the outline",
+					"items": {
+						"type": "string",
+						"enum": [
+							"module",
+							"namespace",
+							"package",
+							"class",
+							"method",
+							"property",
+							"field",
+							"constructor",
+							"enum",
+							"interface",
+							"function",
+							"variable",
+							"constant",
+							"string",
+							"number",
+							"boolean",
+							"array",
+							"object",
+							"key",
+							"null",
+							"enummember",
+							"struct",
+							"event",
+							"operator",
+							"typeparameter"
+						]
+					}
+				},
+				"outline-map.defaultMaxDepth": {
+					"type": "number",
+					"default": 0,
+					"description": "The default max depth of the outline. 0 means no limit."
+				},
+				"outline-map.customFont": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Custom font for the outline.<br/> Syntax: `[ <family-name> | <generic-family> ]#`"
+				},
+				"outline-map.customCSS": {
+					"type": "string",
+					"default": "",
+					"description": "Custom css for the outline. The css will be injected into the outline's webview."
+				},
+				"outline-map.debug": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable debug mode. Debug messages will be printed to the console."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "outline-map.reduceDepth",
+				"title": "Depth-",
+				"icon": "$(chevron-left)",
+				"shortTitle": "Reduce depth",
+				"category": "outline-map"
+			},
+			{
+				"command": "outline-map.addDepth",
+				"title": "Depth+",
+				"icon": "$(chevron-right)",
+				"shortTitle": "Add depth",
+				"category": "outline-map"
+			},
+			{
+				"command": "outline-map.unpin",
+				"title": "Frozen -> Unpinned",
+				"icon": "$(pinned-dirty)",
+				"shortTitle": "Unpin",
+				"category": "outline-map"
+			},
+			{
+				"command": "outline-map.pin",
+				"title": "Unpinned -> Pinned",
+				"icon": "$(pin)",
+				"shortTitle": "Pin",
+				"category": "outline-map"
+			},
+			{
+				"command": "outline-map.freeze",
+				"title": "Pinned -> Frozen",
+				"icon": "$(pinned)",
+				"shortTitle": "Freeze",
+				"category": "outline-map"
+			},
+			{
+				"command": "outline-map.focusOutline",
+				"title": "Focus outline and start searching or navigating",
+				"category": "outline-map"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "outline-map.focusOutline",
+				"key": "Alt+l"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "outline-map.pin",
+					"when": "view == outline-map-view && outline-map.pin-status == 0",
+					"group": "navigation"
+				},
+				{
+					"command": "outline-map.unpin",
+					"when": "view == outline-map-view && outline-map.pin-status == 2",
+					"group": "navigation"
+				},
+				{
+					"command": "outline-map.freeze",
+					"when": "view == outline-map-view && outline-map.pin-status == 1",
+					"group": "navigation"
+				},
+				{
+					"command": "outline-map.addDepth",
+					"when": "view == outline-map-view && outline-map.defaultMaxDepthSet",
+					"group": "navigation"
+				},
+				{
+					"command": "outline-map.reduceDepth",
+					"when": "view == outline-map-view && outline-map.defaultMaxDepthSet",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"test": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. --extensionTestsPath=out/test/suite/index.js",
+		"pretest": "npm run compile-web",
+		"vscode:prepublish": "npm run package-web",
+		"compile-web": "webpack",
+		"watch-web": "webpack --watch",
+		"package-web": "webpack --mode production --devtool hidden-source-map",
+		"lint": "eslint src --ext ts",
+		"run-in-browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
+	},
+	"devDependencies": {
+		"@types/mocha": "^9.1.1",
+		"@types/node": "^18.14.0",
+		"@types/vscode": "^1.60.0",
+		"@types/webpack-env": "^1.17.0",
+		"@typescript-eslint/eslint-plugin": "^5.53.0",
+		"@typescript-eslint/parser": "^5.53.0",
+		"@vscode/test-web": "^0.0.26",
+		"assert": "^2.0.0",
+		"css-loader": "^6.7.3",
+		"eslint": "^8.18.0",
+		"mocha": "^10.0.0",
+		"node-sass": "^8.0.0",
+		"process": "^0.11.10",
+		"sass-loader": "^13.2.0",
+		"style-loader": "^3.3.1",
+		"ts-loader": "^9.3.1",
+		"typescript": "^4.7.4",
+		"webpack": "^5.73.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"dependencies": {
+		"@types/vscode-webview": "^1.57.1",
+		"@vscode/codicons": "^0.0.31",
+		"overlayscrollbars": "^2.1.0"
+	},
+	"__metadata": {
+		"id": "926f4730-3fd1-4d09-be10-56e7402560c5",
+		"publisherId": "952d2f65-05f6-4be2-a191-a4bf2b377ad1",
+		"publisherDisplayName": "Gerrnperl",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1693211011148,
+		"preRelease": false
+	}
+}

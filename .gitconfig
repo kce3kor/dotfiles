@@ -1,0 +1,65 @@
+[user]
+
+        email = kamal.shrestha@in.bosch.com
+
+        name = kce3kor
+
+[credential]
+
+        helper = store
+
+[color]
+
+        ui = true
+
+[commit]
+	template = ~/.gitmessage
+[pull]
+
+        rebase = true
+
+[core]
+
+        autocrlf = input
+
+        longpaths = true
+
+[gitreview]
+
+        username = kce3kor
+
+[url "ssh://gitolite@hi0vm066.de.bosch.com/"]
+
+        insteadOf = gitolite:
+
+[url "ssh://kce3kor@rbcm-gerrit.de.bosch.com:29418/"]
+
+        pushinsteadOf = ssh://rbcm-gerrit.de.bosch.com:29418/
+
+        pushinsteadOf = ssh://kce3kor@rbcm-gerrit.de.bosch.com:29418/
+
+        pushinsteadOf = cm_gerrit:
+
+[url "ssh://gitolite@sgpvmc0232.apac.bosch.com/"]
+
+        insteadOf = gitserver:
+
+[url "ssh://kce3kor@rbcm-gerrit-sgh.apac.bosch.com:29418/"]
+
+        insteadOf = ssh://rbcm-gerrit.de.bosch.com:29418/
+
+        insteadOf = ssh://kce3kor@rbcm-gerrit.de.bosch.com:29418/
+
+        insteadOf = cm_gerrit:
+
+[url "ssh://kce3kor@rbcm-gerrit-sgh.apac.bosch.com:29418/tools/git-repo"]
+
+        insteadOf = https://gerrit.googlesource.com/git-repo
+
+#[url "ssh://git@rbvh-fs2/"]
+
+#        insteadOf = ssh://git@git-scm.adit-jv.com/
+
+#[url "ssh://git@ky0app02.adit-jv.com/"]
+
+#       insteadOf = ssh://git@git-scm.adit-jv.com/
